@@ -1,3 +1,39 @@
 <header>
     <h1>Let's Friggin Devour This Burger!</h1>
 </header>
+
+<div class="flexbox-container">
+
+    <div class="flexLeft">
+        <img src="" alt="">
+        <h2>You better eat that burger!</h2>
+        <ul>
+            {{#each burger}}
+            {{#unless devoured}}
+            {{> burger/burger-block devoured=false}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="flexMid">
+        <h2>CHOOSE YOUR VICTIMS!</h2>
+        <form class="burgerInput">
+            <input type="text" id="newBurger" name="burger_name">
+            <button class="submit" id="burgerBtn">Add another burger!</button>
+        </form>
+    </div>
+
+    <div class="flexRight">
+        <img src="" alt="">
+        <h2>Now, that's how you eat a burger!</h2>
+        <ul>
+            {{#each burger}}
+            {{#if devoured}}
+            {{> burger/burger-block devoured=true}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+
+</div>
