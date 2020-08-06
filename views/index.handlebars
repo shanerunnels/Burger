@@ -5,9 +5,9 @@
 <div class="flexbox-container">
 
     <div class="flexLeft">
-        <img src="" alt="">
+        <img src="https://images.ctfassets.net/oewsurrg31ok/7pUDQiQaaQiKoyUGF7AzBr/c0ab01e4bff4efec0e992717b208603a/2020_Burger_Black_and_Bleu.png?w=950&q=55" alt="">
         <h2>You better eat that burger!</h2>
-        <ul>
+        <ul class="uneaten">
             {{#each burger}}
             {{#unless devoured}}
             {{> burger/burger-block devoured=false}}
@@ -25,9 +25,9 @@
     </div>
 
     <div class="flexRight">
-        <img src="" alt="">
+        <img src="https://images.ctfassets.net/oewsurrg31ok/7pUDQiQaaQiKoyUGF7AzBr/c0ab01e4bff4efec0e992717b208603a/2020_Burger_Black_and_Bleu.png?w=950&q=55" alt="">
         <h2>Now, that's how you eat a burger!</h2>
-        <ul>
+        <ul class="eaten">
             {{#each burger}}
             {{#if devoured}}
             {{> burger/burger-block devoured=true}}

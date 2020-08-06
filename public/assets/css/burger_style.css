@@ -1,3 +1,12 @@
+body {
+    background-color: #FF6347;
+}
+
+img {
+    height: 237px;
+    width: 316px;
+}
+
 h1 {
     text-align: center;
 }
@@ -7,4 +16,8 @@ h1 {
     justify-content: center;
     align-items: center;
     align-content: center;
+}
+
+form {
+    text-align: center;
 }
