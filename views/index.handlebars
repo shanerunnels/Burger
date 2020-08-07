@@ -4,34 +4,48 @@
 
 <div class="flexbox-container">
 
-    <div class="flexLeft">
-        <img src="https://images.ctfassets.net/oewsurrg31ok/7pUDQiQaaQiKoyUGF7AzBr/c0ab01e4bff4efec0e992717b208603a/2020_Burger_Black_and_Bleu.png?w=950&q=55" alt="">
+    <div>
+        <img src="https://images.ctfassets.net/oewsurrg31ok/7pUDQiQaaQiKoyUGF7AzBr/c0ab01e4bff4efec0e992717b208603a/2020_Burger_Black_and_Bleu.png?w=950&q=55"
+            alt="">
         <h2>You better eat that burger!</h2>
-        <ul class="uneaten">
-            {{#each burger}}
+        <ul id="uneatenList">
+            <h2>Burgers to Devour</h2>
+            {{#each burgers}}
             {{#unless devoured}}
-            {{> burger/burger-block devoured=false}}
+            <li class="uneaten">
+                <p>{{burger_name}}</p>
+                <button class="devour" data-id="{{id}}">
+                    Devour!
+                </button>
+            </li>
             {{/unless}}
             {{/each}}
         </ul>
     </div>
 
-    <div class="flexMid">
+    <div>
         <h2>CHOOSE YOUR VICTIMS!</h2>
-        <form class="burgerInput">
-            <input type="text" id="newBurger" name="burger_name">
-            <button class="submit" id="burgerBtn">Add another burger!</button>
+        <form class="create-form">
+            <div class="form-group">
+                <input type="text" id="newBurger" name="name">
+            </div>
+            
+            <button class="submit">Add another burger!</button>
         </form>
     </div>
 
-    <div class="flexRight">
-        <img src="https://images.ctfassets.net/oewsurrg31ok/7pUDQiQaaQiKoyUGF7AzBr/c0ab01e4bff4efec0e992717b208603a/2020_Burger_Black_and_Bleu.png?w=950&q=55" alt="">
+    <div>
+        <img src="https://images.ctfassets.net/oewsurrg31ok/7pUDQiQaaQiKoyUGF7AzBr/c0ab01e4bff4efec0e992717b208603a/2020_Burger_Black_and_Bleu.png?w=950&q=55"
+            alt="">
         <h2>Now, that's how you eat a burger!</h2>
-        <ul class="eaten">
-            {{#each burger}}
+        <ul id="devouredList">
+            <h2>Devoured Burgers</h2>
+            {{#each burgers}}
             {{#if devoured}}
-            {{> burger/burger-block devoured=true}}
-            {{/if}}
+            <li class="devoured">
+                {{burger_name}}
+                {{/if}}
+            </li>
             {{/each}}
         </ul>
     </div>
