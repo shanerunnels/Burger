@@ -8,11 +8,11 @@
         <img src="https://images.ctfassets.net/oewsurrg31ok/7pUDQiQaaQiKoyUGF7AzBr/c0ab01e4bff4efec0e992717b208603a/2020_Burger_Black_and_Bleu.png?w=950&q=55"
             alt="">
         <h2>You better eat that burger!</h2>
-        <ul id="uneatenList">
+        <ul>
             <h2>Burgers to Devour</h2>
             {{#each burgers}}
             {{#unless devoured}}
-            <li class="uneaten">
+            <li>
                 <p>{{burger_name}}</p>
                 <button class="devour" data-id="{{id}}">
                     Devour!
@@ -38,11 +38,11 @@
         <img src="https://images.ctfassets.net/oewsurrg31ok/7pUDQiQaaQiKoyUGF7AzBr/c0ab01e4bff4efec0e992717b208603a/2020_Burger_Black_and_Bleu.png?w=950&q=55"
             alt="">
         <h2>Now, that's how you eat a burger!</h2>
-        <ul id="devouredList">
+        <ul>
             <h2>Devoured Burgers</h2>
             {{#each burgers}}
             {{#if devoured}}
-            <li class="devoured">
+            <li>
                 {{burger_name}}
                 {{/if}}
             </li>
