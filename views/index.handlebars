@@ -9,7 +9,6 @@
             alt="">
         <h2>You better eat that burger!</h2>
         <ul>
-            <h2>Burgers to Devour</h2>
             {{#each burgers}}
             {{#unless devoured}}
             <li>
@@ -29,7 +28,7 @@
             <div class="form-group">
                 <input type="text" id="newBurger" name="name">
             </div>
-            
+
             <button class="submit">Add another burger!</button>
         </form>
     </div>
@@ -39,7 +38,6 @@
             alt="">
         <h2>Now, that's how you eat a burger!</h2>
         <ul>
-            <h2>Devoured Burgers</h2>
             {{#each burgers}}
             {{#if devoured}}
             <li>
